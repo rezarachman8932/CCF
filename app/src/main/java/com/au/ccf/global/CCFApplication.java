@@ -38,6 +38,10 @@ public class CCFApplication extends Application {
             mRoleList = new ArrayList<>();
         }
 
+        if (mRoleList.size() > 0) {
+            mRoleList.clear();
+        }
+
         mRoleList.add(getResources().getString(R.string.item_role_provider));
         mRoleList.add(getResources().getString(R.string.item_role_member));
 

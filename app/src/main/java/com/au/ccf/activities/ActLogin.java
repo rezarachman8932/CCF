@@ -5,6 +5,7 @@ import android.support.design.widget.BottomSheetDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -18,9 +19,6 @@ import butterknife.OnClick;
 
 public class ActLogin extends ActBase {
 
-    @BindView(R.id.bottom_sheet)
-    View mBottomSheet;
-
     @BindView(R.id.input_user_name)
     EditText mInputUserName;
 
@@ -31,7 +29,7 @@ public class ActLogin extends ActBase {
     EditText mInputRole;
 
     @BindView(R.id.button_submit)
-    EditText mButtonSubmit;
+    Button mButtonSubmit;
 
     @BindView(R.id.text_forgot_password)
     TextView mTextForgotPassword;
@@ -44,11 +42,9 @@ public class ActLogin extends ActBase {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_login);
         ButterKnife.bind(this);
-
-//        BottomSheetBehavior mBottomSheetBehavior = BottomSheetBehavior.from(mBottomSheet);
     }
 
-    @OnClick({ R.id.input_role, R.id.button_submit, R.id.text_forgot_password })
+    @OnClick({R.id.input_role, R.id.button_submit, R.id.text_forgot_password})
     void onActionClick(View view) {
         switch (view.getId()) {
             case R.id.input_role:
@@ -72,13 +68,14 @@ public class ActLogin extends ActBase {
             }
         });
 
-        RecyclerView recyclerView = (RecyclerView) mBottomSheet.findViewById(R.id.list_role);
+        View view = getLayoutInflater().inflate(R.layout.bottom_sheet_list, null);
+        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.list_role);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(roleAdapter);
 
         BottomSheetDialog dialog = new BottomSheetDialog(this);
-        dialog.setContentView(mBottomSheet);
+        dialog.setContentView(view);
         dialog.show();
     }
 

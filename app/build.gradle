@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    buildToolsVersion "23.0.3"
 
     defaultConfig {
         applicationId "com.au.ccf"
@@ -23,8 +23,9 @@ android {
         main {
             res.srcDirs = [
                     'src/main/res/layouts/activities',
-                    'src/main/res/layouts/fragments',
+                    'src/main/res/layouts/customs',
                     'src/main/res/layouts/lists',
+                    'src/main/res/layouts/fragments',
                     'src/main/res/layouts/',
                     'src/main/res/'
             ]
