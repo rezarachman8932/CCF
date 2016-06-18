@@ -8,4 +8,9 @@
     <string name="text_forgot_password">Forgot Password?</string>
     <string name="text_new_user">New User?</string>
     <string name="text_sign_up">Sign Up</string>
+    <string name="header_home">HOME</string>
+    <string name="button_request_quote">Request Quote</string>
+    <string name="button_my_quote">My Quote</string>
+    <string name="button_search_request">Search Request</string>
+    <string name="button_my_proposals">My Proposals</string>
 </resources>

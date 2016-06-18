@@ -9,11 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.au.ccf.R;
 import com.au.ccf.adapters.RoleAdapter;
 import com.au.ccf.global.CCFApplication;
+import com.au.ccf.utils.ActivityUtil;
 
 public class ActLogin extends ActBase implements View.OnClickListener {
 
@@ -55,8 +55,15 @@ public class ActLogin extends ActBase implements View.OnClickListener {
     }
 
     private void submit() {
+        String username = vInputUserName.getText().toString();
+        String password = vInputPassword.getText().toString();
         String role = vInputRole.getText().toString();
-        Toast.makeText(this, role, Toast.LENGTH_SHORT).show();
+
+        if (username.equalsIgnoreCase("member")) {
+            ActivityUtil.startActivity(this, ActLandingMember.class, null, 0);
+        } else {
+            ActivityUtil.startActivity(this, ActLandingProvider.class, null, 0);
+        }
     }
 
     private void signUp() {

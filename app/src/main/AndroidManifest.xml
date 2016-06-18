@@ -19,6 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activities.ActLandingMember">
+        </activity>
+        <activity
+            android:name=".activities.ActLandingProvider">
+        </activity>
     </application>
 
 </manifest>
