@@ -4,59 +4,67 @@ import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.au.ccf.R;
 import com.au.ccf.adapters.RoleAdapter;
 import com.au.ccf.global.CCFApplication;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+public class ActLogin extends ActBase implements View.OnClickListener {
 
-public class ActLogin extends ActBase {
-
-    @BindView(R.id.input_user_name)
-    EditText mInputUserName;
-
-    @BindView(R.id.input_password)
-    EditText mInputPassword;
-
-    @BindView(R.id.input_role)
-    EditText mInputRole;
-
-    @BindView(R.id.button_submit)
-    Button mButtonSubmit;
-
-    @BindView(R.id.text_forgot_password)
-    TextView mTextForgotPassword;
-
-    @BindView(R.id.text_sign_up)
-    TextView mTextSignUp;
+    private EditText vInputUserName;
+    private EditText vInputPassword;
+    private EditText vInputRole;
+    private Button vButtonSubmit;
+    private TextView vTextForgotPassword;
+    private TextView vTextSignUp;
+    private BottomSheetDialog mDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_login);
-        ButterKnife.bind(this);
+
+        initView();
+        initListener();
     }
 
-    @OnClick({R.id.input_role, R.id.button_submit, R.id.text_forgot_password})
-    void onActionClick(View view) {
-        switch (view.getId()) {
-            case R.id.input_role:
-                showRoleList();
-                break;
-            case R.id.button_submit:
-                break;
-            case R.id.text_forgot_password:
-                break;
-            case R.id.text_sign_up:
-                break;
+    private void initView() {
+        mDialog = new BottomSheetDialog(this);
+        vInputUserName = (EditText) findViewById(R.id.input_user_name);
+        vInputPassword = (EditText) findViewById(R.id.input_password);
+        vInputRole = (EditText) findViewById(R.id.input_role);
+        if (vInputRole != null) {
+            vInputRole.setInputType(InputType.TYPE_NULL);
         }
+        vButtonSubmit = (Button) findViewById(R.id. button_submit);
+        vTextForgotPassword = (TextView) findViewById(R.id.text_forgot_password);
+        vTextSignUp = (TextView) findViewById(R.id.text_sign_up);
+    }
+
+    private void initListener() {
+        vTextSignUp.setOnClickListener(this);
+        vTextForgotPassword.setOnClickListener(this);
+        vButtonSubmit.setOnClickListener(this);
+        vInputRole.setOnClickListener(this);
+    }
+
+    private void submit() {
+        String role = vInputRole.getText().toString();
+        Toast.makeText(this, role, Toast.LENGTH_SHORT).show();
+    }
+
+    private void signUp() {
+
+    }
+
+    private void forgotPassword() {
+
     }
 
     private void showRoleList() {
@@ -64,7 +72,9 @@ public class ActLogin extends ActBase {
         roleAdapter.setOnItemClickListener(new RoleAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(RoleAdapter.RoleHolder item, int position) {
-
+                String selectedRole = CCFApplication.getInstance().getRoleList().get(position);
+                vInputRole.setText(selectedRole);
+                mDialog.dismiss();
             }
         });
 
@@ -74,9 +84,21 @@ public class ActLogin extends ActBase {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(roleAdapter);
 
-        BottomSheetDialog dialog = new BottomSheetDialog(this);
-        dialog.setContentView(view);
-        dialog.show();
+        mDialog.setContentView(view);
+        mDialog.show();
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v.equals(vButtonSubmit)) {
+            submit();
+        } else if (v.equals(vTextForgotPassword)) {
+            forgotPassword();
+        } else if (v.equals(vTextSignUp)) {
+            signUp();
+        } else {
+            showRoleList();
+        }
     }
 
 }
