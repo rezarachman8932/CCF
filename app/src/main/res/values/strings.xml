@@ -1,16 +1,46 @@
 <resources>
     <string name="app_name">CCF</string>
+
     <string name="hint_user_name">Username</string>
     <string name="hint_password">Password</string>
+
     <string name="item_role_provider">Provider</string>
     <string name="item_role_member">Member</string>
-    <string name="button_submit">Submit</string>
+
     <string name="text_forgot_password">Forgot Password?</string>
     <string name="text_new_user">New User?</string>
     <string name="text_sign_up">Sign Up</string>
+
     <string name="header_home">HOME</string>
+    <string name="header_quote_request">QUOTE REQUEST</string>
+    <string name="header_search_request">SEARCH REQUEST</string>
+
+    <string name="sub_header_quote_request_member_details">Member Details</string>
+    <string name="sub_header_quote_request_job_details">Job Details</string>
+
+    <string name="button_submit">Submit</string>
     <string name="button_request_quote">Request Quote</string>
     <string name="button_my_quote">My Quote</string>
     <string name="button_search_request">Search Request</string>
     <string name="button_my_proposals">My Proposals</string>
+
+    <string name="list_job_type_plant_hire">Plant Hire</string>
+    <string name="list_job_type_civil_sub_contracting">Civil Sub Contracting</string>
+    <string name="list_job_type_civil_material">Civil Material</string>
+    <string name="list_job_type_civil_employ">Civil Employ</string>
+    <string name="list_job_type_fill_exchange">Fill Exchange</string>
+
+    <string name="list_equipment_type_excavators">Excavators</string>
+    <string name="list_equipment_type_backhoe_loaders">Backhoe Loaders</string>
+    <string name="list_job_type_skid_steer_loaders">Skid Steer Loaders</string>
+    <string name="list_job_type_graders">Graders</string>
+    <string name="list_job_type_bulldozers">Bulldozers</string>
+
+    <string name="quote_request_field_organization">Organization</string>
+    <string name="quote_request_field_contact_person">Contact Person</string>
+    <string name="quote_request_field_email">Email</string>
+    <string name="quote_request_field_telephone">Telephone</string>
+    <string name="quote_request_field_job_type">Job Type</string>
+    <string name="quote_request_field_equipment_type">Equipment Type</string>
+    <string name="quote_request_field_quantity">Quantity</string>
 </resources>

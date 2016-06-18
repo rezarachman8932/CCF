@@ -25,6 +25,9 @@
         <activity
             android:name=".activities.ActLandingProvider">
         </activity>
+        <activity
+            android:name=".activities.ActRequestQuote">
+        </activity>
     </application>
 
 </manifest>

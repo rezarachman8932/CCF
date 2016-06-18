@@ -29,7 +29,6 @@ public class ActLogin extends ActBase implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_login);
-
         initView();
         initListener();
     }

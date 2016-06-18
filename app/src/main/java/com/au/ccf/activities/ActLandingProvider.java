@@ -20,7 +20,7 @@ public class ActLandingProvider extends ActBase implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_landing_provider);
 
-        setHeaderTitle(getString(R.string.header_home));
+        setHeaderTitle(getString(R.string.header_home), false);
         initView();
         initListener();
     }

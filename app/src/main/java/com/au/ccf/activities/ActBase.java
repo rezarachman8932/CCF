@@ -27,7 +27,7 @@ public abstract class ActBase extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
-    protected void setHeaderTitle(String title) {
+    protected void setHeaderTitle(String title, boolean isBackButton) {
         if (getSupportActionBar() != null) {
             LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View view = inflater.inflate(R.layout.header, null);
@@ -42,6 +42,7 @@ public abstract class ActBase extends AppCompatActivity {
 
             getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
             getSupportActionBar().setCustomView(view, params);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(isBackButton);
         }
     }
 
