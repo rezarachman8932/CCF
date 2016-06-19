@@ -28,6 +28,9 @@
         <activity
             android:name=".activities.ActRequestQuote">
         </activity>
+        <activity
+            android:name=".activities.ActRequestQuoteDetail">
+        </activity>
     </application>
 
 </manifest>

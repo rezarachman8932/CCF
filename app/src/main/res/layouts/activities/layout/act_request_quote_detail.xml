@@ -1,6 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/sub_header_quote_request_details"
+        android:textColor="@color/colorButtonBlue"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/colorButtonBlue"
+        android:text="@string/sub_header_request_quote_for"/>
+    <TextView
+        android:id="@+id/request_detail_job_type"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="20dp"
+        android:text="PLANT HIRE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/request_detail_equipment_type"
+        android:textColor="@android:color/black"
+        android:text="Excavators - 2 units"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/request_detail_date"
+        android:textColor="@android:color/black"
+        android:text="22 December 2015 for 5 days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/request_detail_time"
+        android:textColor="@android:color/black"
+        android:text="6:00 AM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/request_detail_address_1"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="20dp"
+        android:text="Melbourne CBD Location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/request_detail_address_2"
+        android:textColor="@android:color/black"
+        android:text="221 Little Lonsdale Street"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/request_detail_address_3"
+        android:textColor="@android:color/black"
+        android:text="Melbourne VIC 3000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/button_request_detail_confirm"
+        android:background="@drawable/button_blue"
+        android:text="@string/button_request_detail_confirm"
+        android:layout_marginTop="30dp"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/button_request_detail_edit"
+        android:background="@drawable/button_pink"
+        android:text="@string/button_request_detail_edit"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

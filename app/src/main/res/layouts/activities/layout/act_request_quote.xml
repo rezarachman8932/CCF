@@ -12,7 +12,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textColor="@color/colorButton"
+            android:textColor="@color/colorButtonBlue"
             android:layout_gravity="center_horizontal"
             android:textSize="18sp"
             android:text="@string/sub_header_quote_request_member_details"/>
@@ -24,7 +24,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorButton"
+                android:textColor="@color/colorButtonBlue"
                 android:text="@string/quote_request_field_organization"/>
             <EditText
                 android:id="@+id/input_organization"
@@ -40,7 +40,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorButton"
+                android:textColor="@color/colorButtonBlue"
                 android:text="@string/quote_request_field_contact_person"/>
             <EditText
                 android:id="@+id/input_contact_person"
@@ -56,7 +56,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorButton"
+                android:textColor="@color/colorButtonBlue"
                 android:text="@string/quote_request_field_email"/>
             <EditText
                 android:id="@+id/input_email"
@@ -72,7 +72,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorButton"
+                android:textColor="@color/colorButtonBlue"
                 android:text="@string/quote_request_field_telephone"/>
             <EditText
                 android:id="@+id/input_telephone"
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
-            android:textColor="@color/colorButton"
+            android:textColor="@color/colorButtonBlue"
             android:layout_gravity="center_horizontal"
             android:textSize="18sp"
             android:text="@string/sub_header_quote_request_job_details"/>
@@ -97,7 +97,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorButton"
+                android:textColor="@color/colorButtonBlue"
                 android:text="@string/quote_request_field_job_type"/>
             <Spinner
                 android:id="@+id/input_job_type"
@@ -113,7 +113,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorButton"
+                android:textColor="@color/colorButtonBlue"
                 android:text="@string/quote_request_field_equipment_type"/>
             <Spinner
                 android:id="@+id/input_equipment_type"
@@ -129,7 +129,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorButton"
+                android:textColor="@color/colorButtonBlue"
                 android:text="@string/quote_request_field_quantity"/>
             <EditText
                 android:id="@+id/input_quantity"

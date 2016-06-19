@@ -11,6 +11,7 @@ import android.widget.Spinner;
 
 import com.au.ccf.R;
 import com.au.ccf.global.CCFApplication;
+import com.au.ccf.utils.ActivityUtil;
 
 import java.util.List;
 
@@ -20,6 +21,10 @@ import java.util.List;
  */
 public class ActRequestQuote extends ActBase implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
+    public static final String JOB_TYPE = "JOB_TYPE";
+    public static final String EQUIPMENT_TYPE = "EQUIPMENT_TYPE";
+    public static final String QUANTITY = "QUANTITY";
+
     private EditText vInputOrganization;
     private EditText vInputContactPerson;
     private EditText vInputEmail;
@@ -28,6 +33,8 @@ public class ActRequestQuote extends ActBase implements View.OnClickListener, Ad
     private Spinner vInputJobType;
     private Spinner vInputEquipmentType;
     private Button vOKButton;
+    private String mSelectedJobType;
+    private String mSelectedEquipmentType;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -74,16 +81,21 @@ public class ActRequestQuote extends ActBase implements View.OnClickListener, Ad
     @Override
     public void onClick(View v) {
         if (vOKButton.equals(v)) {
-
+            String quantity = vInputQuantity.getText().toString();
+            Bundle bundle = new Bundle();
+            bundle.putString(JOB_TYPE, mSelectedJobType);
+            bundle.putString(EQUIPMENT_TYPE, mSelectedEquipmentType);
+            bundle.putString(QUANTITY, quantity);
+            ActivityUtil.startActivity(this, ActRequestQuoteDetail.class, bundle, 0);
         }
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         if (parent.getId() == R.id.input_job_type) {
-            String selectedJobType = CCFApplication.getInstance().getJobTypeList().get(position);
+            mSelectedJobType = CCFApplication.getInstance().getJobTypeList().get(position);
         } else if (parent.getId() == R.id.input_equipment_type) {
-            String selectedEquipmentType = CCFApplication.getInstance().getEquipmentTypeList().get(position);
+            mSelectedEquipmentType = CCFApplication.getInstance().getEquipmentTypeList().get(position);
         }
     }
 
