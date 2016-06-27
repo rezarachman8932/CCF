@@ -14,6 +14,7 @@
     <string name="header_home">HOME</string>
     <string name="header_quote_request">QUOTE REQUEST</string>
     <string name="header_search_request">SEARCH REQUEST</string>
+    <string name="header_detail_quote">DETAIL QUOTE</string>
 
     <string name="sub_header_quote_request_member_details">Member Details</string>
     <string name="sub_header_quote_request_job_details">Job Details</string>

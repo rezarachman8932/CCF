@@ -86,7 +86,7 @@ public class ActRequestQuote extends ActBase implements View.OnClickListener, Ad
             bundle.putString(JOB_TYPE, mSelectedJobType);
             bundle.putString(EQUIPMENT_TYPE, mSelectedEquipmentType);
             bundle.putString(QUANTITY, quantity);
-            ActivityUtil.startActivity(this, ActRequestQuoteDetail.class, bundle, 0);
+            ActivityUtil.startActivity(this, ActRequestQuoteConfirmation.class, bundle, 0);
         }
     }
 

@@ -7,11 +7,12 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.au.ccf.R;
+import com.au.ccf.utils.ActivityUtil;
 
 /**
  * Created by rezarachman on 6/19/16.
  */
-public class ActRequestQuoteDetail extends ActBase implements View.OnClickListener {
+public class ActRequestQuoteConfirmation extends ActBase implements View.OnClickListener {
 
     private String mJobType;
     private String mEquipmentType;
@@ -24,7 +25,7 @@ public class ActRequestQuoteDetail extends ActBase implements View.OnClickListen
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_request_quote_detail);
+        setContentView(R.layout.act_request_quote_confirmation);
         setHeaderTitle(getString(R.string.header_quote_request), true);
         getBundle();
         initView();
@@ -58,7 +59,9 @@ public class ActRequestQuoteDetail extends ActBase implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-
+        if (v.equals(vButtonConfirm)) {
+            ActivityUtil.startActivity(this, ActQuoteList.class, null, 0);
+        }
     }
 
 }

@@ -65,7 +65,7 @@
         android:layout_height="wrap_content" />
     <Button
         android:id="@+id/button_request_detail_confirm"
-        android:background="@drawable/button_blue"
+        android:background="@drawable/rounded_blue"
         android:text="@string/button_request_detail_confirm"
         android:layout_marginTop="30dp"
         android:textColor="@android:color/white"
@@ -73,7 +73,7 @@
         android:layout_height="wrap_content" />
     <Button
         android:id="@+id/button_request_detail_edit"
-        android:background="@drawable/button_pink"
+        android:background="@drawable/rounded_pink"
         android:text="@string/button_request_detail_edit"
         android:layout_marginTop="10dp"
         android:textColor="@android:color/white"

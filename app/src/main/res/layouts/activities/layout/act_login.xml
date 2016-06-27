@@ -90,7 +90,7 @@
         <Button
             android:id="@+id/button_submit"
             android:layout_below="@id/row_role"
-            android:background="@drawable/button_blue"
+            android:background="@drawable/rounded_blue"
             android:text="@string/button_submit"
             android:textColor="@android:color/white"
             android:layout_marginTop="20dp"

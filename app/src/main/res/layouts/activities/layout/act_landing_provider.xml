@@ -13,14 +13,14 @@
             android:id="@+id/button_search_request"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_blue"
+            android:background="@drawable/rounded_blue"
             android:textColor="@android:color/white"
             android:text="@string/button_search_request"/>
         <Button
             android:id="@+id/button_my_proposals"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_blue"
+            android:background="@drawable/rounded_blue"
             android:textColor="@android:color/white"
             android:layout_marginTop="30dp"
             android:text="@string/button_my_proposals"/>

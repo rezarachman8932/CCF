@@ -13,14 +13,14 @@
             android:id="@+id/button_request_quote"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_blue"
+            android:background="@drawable/rounded_blue"
             android:textColor="@android:color/white"
             android:text="@string/button_request_quote"/>
         <Button
             android:id="@+id/button_my_quote"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_blue"
+            android:background="@drawable/rounded_blue"
             android:textColor="@android:color/white"
             android:layout_marginTop="30dp"
             android:text="@string/button_my_quote"/>

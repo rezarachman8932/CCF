@@ -19,6 +19,7 @@
             android:textColor="@android:color/black"
             android:text="Quote ID : 1371"
             android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </RelativeLayout>

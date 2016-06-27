@@ -29,7 +29,10 @@
             android:name=".activities.ActRequestQuote">
         </activity>
         <activity
-            android:name=".activities.ActRequestQuoteDetail">
+            android:name=".activities.ActRequestQuoteConfirmation">
+        </activity>
+        <activity
+            android:name=".activities.ActQuoteList">
         </activity>
     </application>
 

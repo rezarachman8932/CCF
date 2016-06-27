@@ -139,7 +139,7 @@
         </LinearLayout>
         <Button
             android:id="@+id/button_request_quote"
-            android:background="@drawable/button_blue"
+            android:background="@drawable/rounded_blue"
             android:layout_marginTop="15dp"
             android:text="OK"
             android:textColor="@android:color/white"
