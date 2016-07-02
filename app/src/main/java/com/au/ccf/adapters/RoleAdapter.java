@@ -51,16 +51,14 @@ public class RoleAdapter extends RecyclerView.Adapter<RoleAdapter.RoleHolder> {
     }
 
     public static class RoleHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-
         private RoleAdapter adapter;
-        TextView textRole;
+        private TextView textRole;
 
         public RoleHolder(View itemView, RoleAdapter adapter) {
             super(itemView);
-            itemView.setOnClickListener(this);
             this.adapter = adapter;
-
             textRole = (TextView) itemView.findViewById(R.id.item_text_role);
+            itemView.setOnClickListener(this);
         }
 
         public void bind(String item) {
@@ -74,7 +72,6 @@ public class RoleAdapter extends RecyclerView.Adapter<RoleAdapter.RoleHolder> {
                 listener.onItemClick(this, getAdapterPosition());
             }
         }
-
     }
 
 }
