@@ -1,5 +1,6 @@
 package com.au.ccf.adapters;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,30 +18,32 @@ import java.util.List;
 public class QuoteAdapter extends RecyclerView.Adapter<QuoteAdapter.QuoteHolder> {
 
     private OnItemClickListener onItemClickListener;
-    private List<Quote> quotes;
+    private List<Quote> mQuotes;
+    private Context mContext;
 
-    public QuoteAdapter(List<Quote> quotes) {
-        this.quotes = quotes;
+    public QuoteAdapter(Context context, List<Quote> quotes) {
+        mQuotes = quotes;
+        mContext = context;
     }
 
     @Override
     public QuoteHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_my_quote, parent, false);
+        View itemView = LayoutInflater.from(mContext).inflate(R.layout.item_my_quote, parent, false);
         return new QuoteHolder(itemView, this);
     }
 
     @Override
     public void onBindViewHolder(QuoteHolder holder, int position) {
-        Quote quote = quotes.get(position);
+        Quote quote = mQuotes.get(position);
         holder.textDuration.setText(quote.getDuration());
-        holder.textQuoteId.setText("Quote ID : " + quote.getQuoteID());
-        holder.textEquipmentQuantity.setText(quote.getJobEquipment());
+        holder.textQuoteId.setText(mContext.getString(R.string.label_quote_id).concat(" ").concat(quote.getQuoteID()));
+        holder.textEquipmentQuantity.setText(quote.getJobType());
         holder.textStatus.setText(quote.getProposalStatus());
     }
 
     @Override
     public int getItemCount() {
-        return quotes.size();
+        return mQuotes.size();
     }
 
     public void setOnItemClickListener(OnItemClickListener listener) {

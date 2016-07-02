@@ -19,6 +19,11 @@ import com.au.ccf.R;
  */
 public abstract class ActBase extends AppCompatActivity {
 
+    protected final String DATA_DETAIL_QUANTITY       = "quantity";
+    protected final String DATA_DETAIL_EQUIPMENT_TYPE = "equipment_type";
+    protected final String DATA_DETAIL_JOB_TYPE       = "job_type";
+    protected final String DATA_DETAIL_QUOTE_ID       = "quote_id";
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

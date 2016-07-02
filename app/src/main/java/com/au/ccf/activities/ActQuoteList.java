@@ -5,11 +5,11 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.au.ccf.R;
 import com.au.ccf.adapters.QuoteAdapter;
 import com.au.ccf.models.Quote;
+import com.au.ccf.utils.ActivityUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,12 +42,9 @@ public class ActQuoteList extends ActBase {
 
     private List<Quote> getQuotes() {
         List<Quote> quotes = new ArrayList<>();
-        quotes.add(new Quote("Behalf", "2", "33", "05.29", "5 days", "OK"));
-        quotes.add(new Quote("Awesome", "1", "34", "01.29", "1 days", "OK"));
-        quotes.add(new Quote("Dirty", "6", "31", "05.26", "3 days", "OK"));
-        quotes.add(new Quote("Wages", "45", "35", "06.29", "2 days", "OK"));
-        quotes.add(new Quote("And", "7", "22", "05.09", "7 days", "OK"));
-        quotes.add(new Quote("Car", "4", "66", "03.29", "1 days", "OK"));
+        quotes.add(new Quote("Employee", "2", "134", "June 2014", "2 Days", "DONE", "Brake"));
+        quotes.add(new Quote("Driver", "1", "139", "July 2014", "4 Days", "DONE", "Hand"));
+        quotes.add(new Quote("Runner", "5", "132", "April 2014", "5 Days", "DONE", "Tools"));
         return quotes;
     }
 
@@ -56,12 +53,17 @@ public class ActQuoteList extends ActBase {
         if (quotes == null || quotes.size() <= 0) {
             return;
         }
-        QuoteAdapter adapter = new QuoteAdapter(quotes);
+        QuoteAdapter adapter = new QuoteAdapter(this, quotes);
         adapter.setOnItemClickListener(new QuoteAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(QuoteAdapter.QuoteHolder item, int position) {
                 Quote quote = quotes.get(position);
-                Toast.makeText(ActQuoteList.this, quote.getJobEquipment(), Toast.LENGTH_SHORT).show();
+                Bundle bundle = new Bundle();
+                bundle.putString(DATA_DETAIL_EQUIPMENT_TYPE, quote.getEquipmentType());
+                bundle.putString(DATA_DETAIL_JOB_TYPE, quote.getJobType());
+                bundle.putString(DATA_DETAIL_QUANTITY, quote.getQuantity());
+                bundle.putString(DATA_DETAIL_QUOTE_ID, quote.getQuoteID());
+                ActivityUtil.startActivity(ActQuoteList.this, ActDetailQuote.class, bundle, 0);
             }
         });
         vQuoteList.setAdapter(adapter);

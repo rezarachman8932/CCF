@@ -5,24 +5,26 @@ package com.au.ccf.models;
  */
 public class Quote {
 
-    private String jobEquipment;
+    private String jobType;
+    private String equipmentType;
     private String quantity;
     private String quoteID;
     private String time;
     private String duration;
     private String proposalStatus;
 
-    public Quote(String jobEquipment, String quantity, String quoteID, String time, String duration, String proposalStatus) {
-        this.jobEquipment = jobEquipment;
+    public Quote(String jobType, String quantity, String quoteID, String time, String duration, String proposalStatus, String equipmentType) {
+        this.jobType = jobType;
         this.quantity = quantity;
         this.quoteID = quoteID;
         this.time = time;
         this.duration = duration;
         this.proposalStatus = proposalStatus;
+        this.equipmentType = equipmentType;
     }
 
-    public String getJobEquipment() {
-        return jobEquipment;
+    public String getJobType() {
+        return jobType;
     }
 
     public String getQuantity() {
@@ -35,6 +37,10 @@ public class Quote {
 
     public String getTime() {
         return time;
+    }
+
+    public String getEquipmentType() {
+        return equipmentType;
     }
 
     public String getDuration() {
