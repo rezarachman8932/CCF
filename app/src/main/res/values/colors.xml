@@ -8,4 +8,5 @@
     <color name="colorButtonPink">#F15B5C</color>
     <color name="colorButtonPressed">#345953</color>
     <color name="colorBackground">#DDDDDD</color>
+    <color name="colorBackgroundItem">#E4E7EE</color>
 </resources>

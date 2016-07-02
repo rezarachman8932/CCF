@@ -33,7 +33,7 @@ public class QuoteAdapter extends RecyclerView.Adapter<QuoteAdapter.QuoteHolder>
     public void onBindViewHolder(QuoteHolder holder, int position) {
         Quote quote = quotes.get(position);
         holder.textDuration.setText(quote.getDuration());
-        holder.textQuoteId.setText(quote.getQuoteID());
+        holder.textQuoteId.setText("Quote ID : " + quote.getQuoteID());
         holder.textEquipmentQuantity.setText(quote.getJobEquipment());
         holder.textStatus.setText(quote.getProposalStatus());
     }
