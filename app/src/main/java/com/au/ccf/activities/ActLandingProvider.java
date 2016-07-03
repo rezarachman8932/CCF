@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.au.ccf.R;
+import com.au.ccf.utils.ActivityUtil;
 
 /**
  * Created by rezarachman on 6/18/16.
@@ -19,7 +20,6 @@ public class ActLandingProvider extends ActBase implements View.OnClickListener 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_landing_provider);
-
         setHeaderTitle(getString(R.string.header_home), false);
         initView();
         initListener();
@@ -38,7 +38,7 @@ public class ActLandingProvider extends ActBase implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         if (v.equals(vSearchRequest)) {
-
+            ActivityUtil.startActivity(this, ActRequestList.class, null, 0);
         } else {
 
         }

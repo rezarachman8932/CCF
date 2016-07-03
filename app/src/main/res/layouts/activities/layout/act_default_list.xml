@@ -14,15 +14,15 @@
             android:padding="6dp"
             android:background="@drawable/rounded_white">
             <EditText
-                android:id="@+id/input_search_quote"
-                android:hint="Search Quote"
+                android:id="@+id/input_search_keyword"
                 android:layout_width="match_parent"
                 android:background="@android:color/transparent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="text" />
         </RelativeLayout>
     </RelativeLayout>
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/quote_list"
+        android:id="@+id/default_list"
         android:scrollbars="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

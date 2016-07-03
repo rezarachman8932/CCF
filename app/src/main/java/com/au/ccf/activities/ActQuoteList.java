@@ -2,12 +2,9 @@ package com.au.ccf.activities;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.widget.EditText;
 
 import com.au.ccf.R;
-import com.au.ccf.adapters.QuoteAdapter;
+import com.au.ccf.adapters.DefaultListAdapter;
 import com.au.ccf.models.Quote;
 import com.au.ccf.utils.ActivityUtil;
 
@@ -19,25 +16,13 @@ import java.util.List;
  */
 public class ActQuoteList extends ActBase {
 
-    private EditText vInputSearchQuote;
-    private RecyclerView vQuoteList;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_quote_list);
+        setContentView(R.layout.act_default_list);
         setHeaderTitle(getString(R.string.button_my_quote).toUpperCase(), true);
-
-        initView();
+        initViews();
         populateDataList();
-    }
-
-    private void initView() {
-        vInputSearchQuote = (EditText) findViewById(R.id.input_search_quote);
-
-        vQuoteList = (RecyclerView) findViewById(R.id.quote_list);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        vQuoteList.setLayoutManager(layoutManager);
     }
 
     private List<Quote> getQuotes() {
@@ -53,10 +38,10 @@ public class ActQuoteList extends ActBase {
         if (quotes == null || quotes.size() <= 0) {
             return;
         }
-        QuoteAdapter adapter = new QuoteAdapter(this, quotes);
-        adapter.setOnItemClickListener(new QuoteAdapter.OnItemClickListener() {
+        DefaultListAdapter adapter = new DefaultListAdapter(this, quotes);
+        adapter.setOnItemClickListener(new DefaultListAdapter.OnItemClickListener() {
             @Override
-            public void onItemClick(QuoteAdapter.QuoteHolder item, int position) {
+            public void onItemClick(DefaultListAdapter.DefaultHolder item, int position) {
                 Quote quote = quotes.get(position);
                 Bundle bundle = new Bundle();
                 bundle.putString(DATA_DETAIL_EQUIPMENT_TYPE, quote.getEquipmentType());

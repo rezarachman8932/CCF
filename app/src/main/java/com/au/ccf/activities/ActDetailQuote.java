@@ -37,19 +37,28 @@ public class ActDetailQuote extends ActBase {
     }
 
     private void setData() {
-        vTextQuoteID.setText(mQuoteID);
+        String unit = "unit";
+        int quantity = Integer.valueOf(mQuantity);
+        if (quantity > 1) {
+            unit = "units";
+        }
+        vTextQuoteID.setText(getString(R.string.label_quote_id).concat(mQuoteID));
         vTextJobType.setText(mJobType);
         vTextQuantityEquipmentType.setText(mEquipmentType
                 .concat(" - ")
-                .concat(mQuantity));
+                .concat(mQuantity)
+                .concat(" ")
+                .concat(unit));
     }
 
     private void getDataDetail() {
         Bundle bundle = getIntent().getExtras();
-        mQuoteID = bundle.getString(DATA_DETAIL_QUOTE_ID);
-        mEquipmentType = bundle.getString(DATA_DETAIL_EQUIPMENT_TYPE);
-        mJobType = bundle.getString(DATA_DETAIL_JOB_TYPE);
-        mQuantity = bundle.getString(DATA_DETAIL_QUANTITY);
+        if (bundle != null) {
+            mQuoteID = bundle.getString(DATA_DETAIL_QUOTE_ID);
+            mEquipmentType = bundle.getString(DATA_DETAIL_EQUIPMENT_TYPE);
+            mJobType = bundle.getString(DATA_DETAIL_JOB_TYPE);
+            mQuantity = bundle.getString(DATA_DETAIL_QUANTITY);
+        }
     }
 
 }

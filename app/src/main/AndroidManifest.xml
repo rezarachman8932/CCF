@@ -37,6 +37,9 @@
         <activity
             android:name=".activities.ActDetailQuote">
         </activity>
+        <activity
+            android:name=".activities.ActRequestList">
+        </activity>
     </application>
 
 </manifest>
