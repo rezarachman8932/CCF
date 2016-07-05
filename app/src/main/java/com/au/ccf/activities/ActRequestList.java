@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import com.au.ccf.R;
 import com.au.ccf.adapters.DefaultListAdapter;
 import com.au.ccf.models.Request;
+import com.au.ccf.utils.ActivityUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +42,7 @@ public class ActRequestList extends ActBase {
         adapter.setOnItemClickListener(new DefaultListAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(DefaultListAdapter.DefaultHolder item, int position) {
-
+                ActivityUtil.startActivity(ActRequestList.this, ActFilterQuotes.class, null, 0);
             }
         });
         vQuoteList.setAdapter(adapter);

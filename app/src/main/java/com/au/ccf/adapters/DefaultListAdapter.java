@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.au.ccf.R;
@@ -43,6 +44,11 @@ public class DefaultListAdapter extends RecyclerView.Adapter<DefaultListAdapter.
             holder.textEquipmentQuantity.setText(quote.getJobType());
             holder.textStatusAndLocation.setText(quote.getProposalStatus());
             holder.textStatusAndLocation.setTextColor(mContext.getResources().getColor(android.R.color.holo_red_dark));
+            if (position % 2 == 0) {
+                holder.backgroundLayout.setBackgroundColor(mContext.getResources().getColor(R.color.colorBackgroundItemFirst));
+            } else {
+                holder.backgroundLayout.setBackgroundColor(mContext.getResources().getColor(R.color.colorBackgroundItemSecond));
+            }
         } else {
             Request request = (Request) mBaseModels.get(position);
             holder.textDuration.setText(request.getDuration());
@@ -50,6 +56,11 @@ public class DefaultListAdapter extends RecyclerView.Adapter<DefaultListAdapter.
             holder.textEquipmentQuantity.setText(request.getJobType());
             holder.textStatusAndLocation.setText(request.getLocation());
             holder.textStatusAndLocation.setTextColor(mContext.getResources().getColor(android.R.color.black));
+            if (position % 2 == 0) {
+                holder.backgroundLayout.setBackgroundColor(mContext.getResources().getColor(R.color.colorBackgroundItemFirst));
+            } else {
+                holder.backgroundLayout.setBackgroundColor(mContext.getResources().getColor(R.color.colorBackgroundItemSecond));
+            }
         }
     }
 
@@ -76,6 +87,7 @@ public class DefaultListAdapter extends RecyclerView.Adapter<DefaultListAdapter.
         private TextView textQuoteId;
         private TextView textDuration;
         private TextView textStatusAndLocation;
+        private RelativeLayout backgroundLayout;
 
         public DefaultHolder(View itemView, DefaultListAdapter adapter) {
             super(itemView);
@@ -84,6 +96,7 @@ public class DefaultListAdapter extends RecyclerView.Adapter<DefaultListAdapter.
             textQuoteId = (TextView) itemView.findViewById(R.id.quote_id);
             textDuration = (TextView) itemView.findViewById(R.id.quote_time_duration);
             textStatusAndLocation = (TextView) itemView.findViewById(R.id.proposal_status_and_time_duration);
+            backgroundLayout = (RelativeLayout) itemView.findViewById(R.id.row_background);
             itemView.setOnClickListener(this);
         }
 

@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorBackgroundItem"
+    android:id="@+id/row_background"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
     android:paddingLeft="10dp"
@@ -39,10 +39,4 @@
         android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/proposal_status_and_time_duration"
-        android:background="@color/colorBackground"/>
 </RelativeLayout>

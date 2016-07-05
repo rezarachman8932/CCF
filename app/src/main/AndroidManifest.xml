@@ -40,6 +40,9 @@
         <activity
             android:name=".activities.ActRequestList">
         </activity>
+        <activity
+            android:name=".activities.ActFilterQuotes">
+        </activity>
     </application>
 
 </manifest>
