@@ -42,7 +42,7 @@ public class ActRequestList extends ActBase {
         adapter.setOnItemClickListener(new DefaultListAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(DefaultListAdapter.DefaultHolder item, int position) {
-                ActivityUtil.startActivity(ActRequestList.this, ActFilterQuotes.class, null, 0);
+                ActivityUtil.startActivity(ActRequestList.this, ActFilterQuote.class, null, 0);
             }
         });
         vQuoteList.setAdapter(adapter);

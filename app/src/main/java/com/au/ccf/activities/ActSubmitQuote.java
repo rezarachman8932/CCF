@@ -8,13 +8,13 @@ import com.au.ccf.R;
 /**
  * Created by rezarachman on 7/5/16.
  */
-public class ActFilterQuotes extends ActBase {
+public class ActSubmitQuote extends ActBase {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_filter_quotes);
-        setHeaderTitle(getString(R.string.header_filter_quote), true);
+        setContentView(R.layout.act_submit_quote);
+        setHeaderTitle(getString(R.string.header_detail_quote), true);
     }
 
 }

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+    <RelativeLayout
+        android:id="@+id/row_submit_quote_id_job_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/text_submit_job_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PLANT HIRE"
+            android:textColor="@color/colorButtonBlue"/>
+        <TextView
+            android:id="@+id/text_submit_quote_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_quote_id"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/text_submit_quantity_equipment_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Excavators - 2 units"
+        android:layout_below="@id/row_submit_quote_id_job_type"/>
+    <TextView
+        android:id="@+id/text_submit_duration_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="22 December 2015 for 5 days"
+        android:layout_below="@id/text_submit_quantity_equipment_type"/>
+    <TextView
+        android:id="@+id/text_submit_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6:00 AM"
+        android:layout_below="@id/text_submit_duration_date"/>
+    <TextView
+        android:id="@+id/text_submit_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Melbourne VIC 3000"
+        android:layout_below="@id/text_submit_time"/>
+    <TextView
+        android:id="@+id/text_submit_requested_by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorButtonBlue"
+        android:text="@string/label_requested_by"
+        android:layout_below="@id/text_submit_location"/>
+    <TextView
+        android:id="@+id/text_submit_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BLACK ROAD PTY LTD"
+        android:layout_below="@id/text_submit_requested_by"/>
+    <TextView
+        android:id="@+id/text_submit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="John Doe"
+        android:layout_below="@id/text_submit_company"/>
+    <TextView
+        android:id="@+id/text_submit_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="john.doe@black.com.au"
+        android:layout_below="@id/text_submit_name"/>
+    <TextView
+        android:id="@+id/text_submit_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0523343 3232 3232"
+        android:layout_below="@id/text_submit_email"/>
+    <TextView
+        android:id="@+id/text_submit_propose_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorButtonBlue"
+        android:text="Propose cost (excluding GST)"
+        android:layout_below="@id/text_submit_phone"/>
+    <Button
+        android:id="@+id/button_submit_submit_detail_quote"
+        android:background="@drawable/rounded_blue"
+        android:layout_below="@id/text_submit_propose_cost"
+        android:text="@string/button_submit"
+        android:layout_marginTop="30dp"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/button_submit_cancel_detail_quote"
+        android:background="@drawable/rounded_pink"
+        android:text="@string/button_cancel"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/button_submit_submit_detail_quote"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
