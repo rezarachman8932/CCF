@@ -17,14 +17,19 @@
     <string name="header_search_request">SEARCH REQUEST</string>
     <string name="header_detail_quote">DETAIL QUOTE</string>
     <string name="header_filter_quote">FILTER</string>
+    <string name="header_submit_proposal">SUBMIT PROPOSAL</string>
 
     <string name="label_quote_id">Quote ID :</string>
     <string name="label_requested_by">Requested by :</string>
+    <string name="label_location_address">Location Address :</string>
+    <string name="label_send_proposal_to">Send proposal to :</string>
 
     <string name="sub_header_quote_request_member_details">Member Details</string>
     <string name="sub_header_quote_request_job_details">Job Details</string>
     <string name="sub_header_quote_request_details">REQUEST DETAILS</string>
     <string name="sub_header_request_quote_for">Request Quote for</string>
+    <string name="sub_header_submit_proposal_for">Submit proposal for</string>
+    <string name="sub_header_proposal_details">PROPOSAL DETAILS</string>
 
     <string name="button_submit">Submit</string>
     <string name="button_cancel">Cancel</string>

@@ -46,6 +46,9 @@
         <activity
             android:name=".activities.ActSubmitQuote">
         </activity>
+        <activity
+            android:name=".activities.ActReviewSubmittedQuote">
+        </activity>
     </application>
 
 </manifest>
